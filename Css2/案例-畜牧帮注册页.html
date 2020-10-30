@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例-畜牧帮注册页</title>
+    <style>
+        body {
+            font-family: 'Microsoft yahei','Times New Roman', Times, serif;
+        }
+        .nav {
+            height: 115px;
+            background-image: url(images/9_03\(1\).png);
+            background-color:rgb(232, 234, 235);
+            background-repeat: no-repeat;
+            font-size: 20px;
+        }
+        .nav1 {
+            display: inline-block;
+            width: 500px;
+        }
+        .nav2>span{
+            display: inline-block;
+            width: 120px;
+            line-height: 180px;
+        }
+        div {
+            font-size: 14px;
+            color: #333333;
+            
+        }
+        .table2 tr td div {
+            text-align: right;
+            font-weight: 700;
+            color: #333333;
+        }
+        .btn {
+            background-color:coral;
+        }
+        h3 {
+            color:dimgray;
+            text-indent: 2em;
+        }
+        a {
+            text-decoration: none;
+            color: #333333;
+        }
+        a:hover {
+            color:mediumseagreen;
+            text-decoration: underline;
+            background-color:rgb(164, 189, 164);
+        }
+        input:focus {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <span class="nav1"></span>
+        <span class="nav2">
+            <span>
+                <a href="#">首页</a>
+            </span>
+            <span>
+                <a href="#">交易商城</a>
+            </span>
+            <span>
+                <a href="#">扶贫频道</a>
+            </span>
+            <span>
+                <a href="#">牧民预约</a>
+            </span>
+            <span>
+                <a href="#">资讯中心</a>
+            </span>
+            <span>
+                <a href="#">我的账户</a>
+            </span>
+        </span>
+    </div>
+    <div>首页 - 注册账户</div>
+    <h3>注册账户</h3>
+    <hr>
+    <form action="#">
+        <div>
+            <input type="radio" name="user" id="user1"><label for="user1"> 我是牧民</label>
+            <input type="radio" name="user" id="user2"><label for="user2"> 我是商户</label>
+        </div>
+        <table class="table2">
+            <tr>
+                <td><div>手机号码：</div></td>
+                <td>
+                    <input type="text" value="请输入手机号码">
+                </td>
+            </tr>
+            <tr>
+                <td><div>登录密码：</div></td>
+                <td>
+                    <input type="text" value="请输入登陆密码">
+                </td>
+            </tr>
+            <tr>
+                <td><div>确认密码：</div></td>
+                <td>
+                    <input type="text" value="请输入确认密码">
+                </td>
+            </tr>
+            <tr>
+                <td><div>图形验证码：</div></td>
+                <td>
+                    <input type="text" value="请输入图形验证码">
+                    <img src="images/AuthCode.jpg" alt="">看不清？换一张
+                </td>
+            </tr>
+            <tr>
+                <td><div>短信验证码：</div></td>
+                <td>
+                    <input type="text" value="请输入短信验证码">
+                    <input type="button" class="btn" value="获取验证码">
+                </td>
+            </tr>
+            <tr>
+                <td><div>邀请码：</div></td>
+                <td>
+                    <input type="text" value="请输入邀请码">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" checked/>我阅读并同意 《畜牧帮用户注册协议和隐私政策》
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" class="btn" value="确认注册">
+                </td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>
