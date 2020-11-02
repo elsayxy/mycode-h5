@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS优先级</title>
+    <style>
+        div {
+            color: green;
+        }
+        .test {
+            color: red;
+        }
+        #demo {
+            color: purple!important;
+        }
+    </style>
+</head>
+<body>
+    <div class="test" id="demo" style="color: pink;">你笑起来真好看</div>
+</body>
+</html>
