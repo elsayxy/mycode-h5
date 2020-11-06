@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.w {
+    width: 1200px;
+    margin: auto;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.header {
+    height: 42px;
+    background-color: pink;
+    /* 注意：此地方会层叠W的margin */
+    margin: 30px auto;
+}
+.logo {
+    float: left;
+    height: 42px;
+    width: 198px;
+}
+.nav {
+    float: left;
+    margin-left: 70px;
+}
+.nav ul li {
+    float: left;
+    margin-right: 25px;
+}
+.nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+.nav ul li a:hover{
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
+}
