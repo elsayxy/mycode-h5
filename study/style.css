@@ -2,9 +2,20 @@
     margin: 0;
     padding: 0;
 }
+.clearfix:after{
+    content:"";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix{
+    *zoom: 1;
+}
 .body {
     background-color: #f3f5f7;
     font-family: 'Microsoft Yahei','Times New Roman', Times, serif;
+    height: 9000px;
 }
 .w {
     width: 1200px;
@@ -129,32 +140,205 @@ a {
     color: #ffffff;
     font-size: 18px;
 }
-.couse .content{
-    height: 252px;
-    background-color: #ffffff;
+.content{
+    padding:0 20px;
 }
-.couse .content ul{
-    padding: 0px 18px;
+.content ul li{
+    padding: 14px 0px;
+    border-bottom: 1px solid #ccc;
 }
-.couse .content ul li {
-    height: 44px;
-    border-bottom: 1px solid #b7b7b7;
-    padding-top:14px;
-}
-.couse .content ul span{
-    font-size: 14px;
+.content ul li h4{
+    padding-top:16px 0;
     color: #4e4e4e;
 }
-.couse .content ul .study{
-    font-size: 16px;
+.content ul li p{
+    font-size: 12px;
     color: #5a5a5a;
 }
-.couse .content ul p{
-    font-size: 12px;
-    color: #a5a5a5;
-}
-.couse .content ul button{
+
+.content ul button{
     width: 198px;
     height: 38px;
     border: 1px solid #00a4ff;
+}
+.content .more{
+    display:block;
+    height: 38px;
+    border: 1px solid  #00a4ff;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 38px;
+    color: #00a4ff;
+    font-size: 16px;
+    font-weight: 700;
+}
+/* 精品推荐模块 */
+.goods {
+    height: 60px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    box-shadow: 0 2px 3px 3px rgba(0,0,0,.1);
+    /* 行高可以继承给孩子 */
+    line-height: 60px;
+}
+.goods h3 {
+    float: left;
+    margin-left: 30px;
+    font-size: 16px;
+    color: #00a4ff;
+}
+.goods-item{
+    float: left;
+    margin-left: 30px;
+}
+.goods-item li{
+    float: left;
+}
+.goods-item li a {
+    padding: 0 30px;
+    font-size: 16px;
+    color: #050505;
+    border-left: 1px solid #ccc;
+}
+.mod {
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #00a4ff;
+}
+/* box核心内容区域 */
+.box{
+    margin-top: 30px;
+}
+.box-hd{
+    height: 45px;
+}
+.box-hd h3{
+    float: left;
+    font-size: 20px;
+    color: #494949;
+}
+.box-hd a{
+    float: right;
+    font-size: 12px;
+    color: #a5a5a5;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+/* 把li的父亲ul修改的足够宽，一行能装下5个盒子就不会换行了 */
+.box-bd ul{
+    width: 1225px;
+}
+.box-bd ul li{
+    float: left;
+    width: 228px;
+    height: 270px;
+    background-color: pink;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.box-bd ul .box01{
+    background: url(images/pic01.png) no-repeat center;
+}
+.box-bd ul .box02{
+    background: url(images/pic02.png) no-repeat center;
+}
+.box-bd ul .box03{
+    background: url(images/pic03.png) no-repeat center;
+}
+.box-bd ul .box04{
+    background: url(images/pic04.png) no-repeat center;
+}
+.box-bd ul li h4{
+    margin: 180px 20px 0 25px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #050505;
+}
+.box-bd ul li p{
+    margin: 18px 20px 0 25px;
+    font-size: 12px;
+    color: #999999;
+}
+.box-bd ul li p span{
+    color: #ff7c2d;
+}
+.nav2{
+    margin-top: 28px;
+    height: 65px;
+    /* background-color: pink; */
+}
+.nav2 h4{
+    float: left;
+    font-size: 20px;
+    color: #494949;
+    font-weight: 400;
+    line-height: 65px;
+}
+.nav2 ul{
+    float: left;
+    margin-left: 350px;
+}
+.nav2 ul li {
+    float: left;
+    margin-right: 70px;
+}
+.nav2 ul li a {
+    line-height: 65px;
+    font-size: 16px;
+    color: #868686;
+}
+.nav2 ul li a:hover{
+    color: #00a4ff;
+}
+.nav2 a{
+    float: right;
+    margin-right: 20px;
+    font-size: 12px;
+    color: #a5a5a5;
+    line-height: 65px;
+}
+.nav2-pic .pic{
+    float: left;
+}
+.nav2-pic .guangg{
+    float: right;
+}
+.nav2-pic .guangg div{
+    margin-left: 15px;
+}
+.nav2-pic .guangg ul{
+    margin-top: 20px;
+}
+.guangg ul .box01{
+    background: url(images/pic05.png) no-repeat center;
+}
+.guangg ul .box02{
+    background: url(images/pic06.png) no-repeat center;
+}
+.guangg ul .box03{
+    background: url(images/pic07.png) no-repeat center;
+}
+.guangg ul .box04{
+    background: url(images/pic08.png) no-repeat center;
+}
+.guangg ul li{
+    float: right;
+    width: 228px;
+    height: 269px;
+    margin-left: 15px;
+}
+.guangg ul li h4{
+    margin: 180px 20px 0 25px;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+.guangg ul li p{
+    margin: 20px 20px 0 25px;
+    font-size: 12px;
+    color: #999999;
+}
+.guangg ul li p span{
+    color: #ff7c2d;
 }
