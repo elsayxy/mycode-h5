@@ -12,10 +12,9 @@
 .clearfix{
     *zoom: 1;
 }
-.body {
+body {
     background-color: #f3f5f7;
     font-family: 'Microsoft Yahei','Times New Roman', Times, serif;
-    height: 9000px;
 }
 .w {
     width: 1200px;
@@ -341,4 +340,85 @@ a {
 }
 .guangg ul li p span{
     color: #ff7c2d;
+}
+.machine-learning ul{
+    width: 1220px;
+}
+.machine-learning ul li{
+    float: left;
+    width: 228px;
+    height: 270px;
+    /* background-color: pink; */
+    margin-right: 15px;
+}
+.machine-learning ul li h4{
+    margin: 180px 20px 0 25px;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+.machine-learning ul li p{
+    margin: 20px 20px 0 25px;
+    font-size: 12px;
+    color: #999999;
+}
+.machine-learning ul li p span{
+    color: #ff7c2d;
+}
+.machine-learning ul .box01{
+    background: url(images/pic05.png) no-repeat center;
+}
+.machine-learning ul .box02{
+    background: url(images/pic06.png) no-repeat center;
+}
+.machine-learning ul .box03{
+    background: url(images/pic07.png) no-repeat center;
+}
+.machine-learning ul .box04{
+    background: url(images/pic08.png) no-repeat center;
+}
+.footer{
+    margin-top: 40px;
+    height: 420px;
+    background-color: #ffffff;
+}
+.copyright{
+    float: left;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.copyright p{
+    margin-top: 25px;
+    font-size: 12px;
+    color: #666666;
+}
+.copyright a{
+    display: block;
+    margin-top: 15px;
+    border: 1px solid #00a4ff;
+    font-size: 16px;
+    color: #00a4ff;
+    width: 118px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+}
+.links{
+    float: right;
+    margin-top: 35px;
+    margin-right: 30px;
+}
+.links dl{
+    float: right;
+    margin-left: 120px;
+}
+.links dt {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+.links dd {
+    font-size: 12px;
+    color: #333333;
+    height: 20px;
 }
