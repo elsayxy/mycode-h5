@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS三角制作</title>
+    <style>
+        .box1{
+            width: 0;
+            height: 0;
+            border-top: 10px solid pink;
+            border-left: 10px solid red;
+            border-right: 10px solid green;
+            border-bottom: 10px solid skyblue;
+        }
+        .box2{
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid skyblue;
+        }
+        .box3{
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-left-color:  red;
+        }
+        .jd {
+            position: relative;
+            margin-top: 20px;
+            width: 120px;
+            height: 249px;
+            background-color: pink;
+        }
+        .jd span{
+            position:absolute;
+            top: -20px;
+            right: 15px;
+            width: 0;
+            /* 为了兼容低版本IE */
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+            border: 10px solid transparent;
+            border-bottom-color: pink;
+        }
+        .xm {
+            position: relative;
+            margin-top: 20px;
+            width: 249px;
+            height: 120px;
+            background-color: skyblue;
+        }
+        .xm span{
+            position:absolute;
+            top: 15px;
+            right: -20px;
+            width: 0;
+            /* 为了兼容低版本IE */
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+            border: 10px solid transparent;
+            border-left-color: skyblue;     
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="jd">
+        <span></span>
+    </div>
+    <div class="xm">
+        <span></span>
+    </div>
+</body>
+</html>
