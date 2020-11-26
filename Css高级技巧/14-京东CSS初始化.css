@@ -1,0 +1,72 @@
+/* 把所有标签的内外边距清零 */
+* {
+    margin: 0;
+    padding: 0
+}
+
+/* em和i标签内的斜体文字设置为不倾斜 */
+em,
+i {
+    font-style: normal
+}
+
+/* 去掉li的小圆点 */
+li {
+    list-style: none
+}
+
+img {
+    /* 兼容低版本的浏览器：如果图片外面包含了链接，会出现边框的问题 */
+    border: 0;
+    /* 解决图片底侧有空白缝隙的问题 */
+    vertical-align: middle
+}
+
+button {
+    /* 鼠标经过button按钮时，会变成小手形状 */
+    cursor: pointer
+}
+
+a {
+    color: #666;
+    /* 取消文字链接的下划线 */
+    text-decoration: none
+}
+
+a:hover {
+    /* 鼠标经过链接时，文字变为这个颜色 */
+    color: #c81623
+}
+
+/* 为按钮和输入的文字指定字体 */
+button,
+input {
+    /* "\5B8B\4F53"：代表字体-宋体 */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif
+}
+
+body {
+    /* CSS3 抗锯齿性，让文字显示的更加清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    color: #666
+}
+
+.hide,
+.none {
+    display: none
+}
+
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
