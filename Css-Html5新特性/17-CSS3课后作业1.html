@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3课后作业1</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+        }
+        i {
+            font-style: normal;
+        }
+
+        body {
+            background: #666;
+        }
+
+        .box {
+            width: 400px;
+            height: 520px;
+            border: 1px solid #fff;
+            margin: 0px auto;
+        }
+
+        .up {
+            width: 100%;
+            height: 400px;
+            padding: 30px 30px 0 30px;
+            border-bottom: 1px solid #d5d5d5;
+            background-color: #ffffff;
+        }
+
+        .up img {
+            width: 290px;
+            height: 290px;
+            margin-left: 20px;
+        }
+
+        .up h3 {
+            font-weight: 400;
+            color: #666666;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .up p {
+            font-size: 18px;
+            color: red;
+            margin-top: 10px;
+        }
+
+        .down {
+            position: relative;
+            background-color: #ffffff;
+            padding: 10px 30px 0 30px;
+            width: 100%;
+            height: calc(100% - 400px);
+        }
+
+        .down span {
+            background-color: #e6e6e6;
+            color: #999;
+            padding: 2px 5px 2px 5px;
+            font-size: 14px;
+        }
+
+        .price {
+            margin-top: 5px;
+            position: absolute;
+            left: 30px;
+        }
+
+        .price h1 {
+            display: inline-block;
+            color: red;
+            font-family: arial;
+            font-weight: 400;
+            font-size: 26px;
+        }
+
+        .price h1::before {
+            content: '￥';
+            font-size: 20px;
+        }
+
+        .price i {
+            color: #999;
+            font-size: 14px;
+            text-decoration: line-through;
+            margin-left: 20px;
+        }
+
+        .price p {
+            display: inline-block;
+            margin-top: 5px;
+            color: #999;
+            font-size: 16px;
+        }
+
+        .price .bar {
+            display: inline-block;
+            width: 100px;
+            height: 10px;
+            background-color: #e6e6e6;
+            border-radius: 5px;
+            margin-left: 5px;
+        }
+
+        .price .bar-in {
+            width: 33%;
+            height: 100%;
+            background-color: red;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            transition: all 0.5s;
+        }
+        .bar:hover .bar-in{
+            width: 100%;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .btn{
+            position: absolute;
+            right: 30px;
+            top: 35px;
+        }
+        .btn a{
+            display: inline-block;
+            height: 50px;
+            width: 100px;
+            background-color: #df0021;
+            color:#fff;
+            font-size: 18px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="up">
+            <!-- <div class="img"></div> -->
+            <img src="images/项链.jpg" alt="">
+            <h3>一鹿有你定制投影项链女</h3>
+            <p>前50名赠送银耳钉</p>
+        </div>
+        <div class="down">
+            <span>255天历史最低价</span>
+            <div class="price">
+                <div>
+                    <h1>99</h1>
+                    <i>￥268</i>
+                </div>
+                <p>已售33%</p>
+                <div class="bar">
+                    <div class="bar-in"></div>
+                </div>
+            </div>
+            <div class="btn">
+                <a href="#">立即抢购</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
