@@ -1,0 +1,608 @@
+/* 把所有标签的内外边距清零 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* em和i标签内的斜体文字设置为不倾斜 */
+em,
+i {
+    font-style: normal
+}
+
+/* 去掉li的小圆点 */
+li {
+    list-style: none
+}
+
+img {
+    /* 兼容低版本的浏览器：如果图片外面包含了链接，会出现边框的问题 */
+    border: 0;
+    /* 解决图片底侧有空白缝隙的问题 */
+    vertical-align: middle
+}
+
+button {
+    /* 鼠标经过button按钮时，会变成小手形状 */
+    cursor: pointer
+}
+
+a {
+    color: #666;
+    /* 取消文字链接的下划线 */
+    text-decoration: none
+}
+
+a:hover {
+    /* 鼠标经过链接时，文字变为这个颜色 */
+    color: #c81623
+}
+
+/* 为按钮和输入的文字指定字体 */
+button,
+input {
+    /* "\5B8B\4F53"：代表字体-宋体 */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 将默认的灰色边框设置为不显示 */
+    border: 0;
+    /* 去掉默认的蓝色边框 */
+    outline: none;
+}
+
+body {
+    /* CSS3 抗锯齿性，让文字显示的更加清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    font: 14px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* color: #666 */
+}
+
+.hide,
+.none {
+    display: none
+}
+
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
+/* --------------------以上是base.css内容-------------------- */
+.testcss{
+    background-color:rgb(143, 141, 141);
+    padding-left: 10px;
+    padding-bottom: 30px;
+}
+.testcss i{
+    color: red;
+}
+.testcss .content{
+    color: skyblue;
+}
+.font20{
+    font-size: 20px;
+}
+#pink{
+    color: pink;
+}
+.family{
+    font-family: 'Microsoft YaHei';
+}
+.family2{
+    font-family: 'Courier New', Courier, monospace;
+}
+.family3{
+    font-family: 'Times New Roman', Times, serif;
+}
+.weight400{
+    font-weight: 400;
+}
+.weight700{
+    font-weight: 700;
+}
+.style_n{
+    font-style: normal;
+}
+.style_i{
+    font-style: italic;
+}
+.font_sum{
+    font:normal 400 18px 'Times New Roman';
+}
+.color_red{
+    color: red;
+}
+.textalign{
+    text-align: center;
+}
+.textd1{
+    text-decoration: underline;
+}
+.textd2{
+    text-decoration: overline;
+}
+.textd3{
+    text-decoration: line-through;
+}
+.texti1{
+    text-indent: 10px;
+}
+.texti2{
+    text-indent: 2em;
+}
+.lineh{
+    line-height: 30px;
+}
+.testcss ol li{
+    color: deeppink;
+}
+.nav>a{
+    color: yellow;
+}
+.alink:link{
+    color: skyblue;
+}
+.avisit:visited{
+    color: skyblue;
+}
+.ahover:hover{
+    color: skyblue;
+}
+.aactive:active{
+    color: skyblue;
+}
+.focus input:focus{
+    background-color: pink;
+}
+/* .nei a,strong,b,em,i,del,s,ins,u,span{
+    background-color: skyblue;
+} */
+.displays strong{
+    display: block;
+    background-color: skyblue;
+}
+.displays div{
+    display: inline;
+    background-color: pink;
+}
+.lineh{
+    height: 40px;
+    background-color: pink;
+    line-height: 40px;
+}
+.bgi{
+    height: 50px;
+    background-image: url('back.jpg');
+}
+.bgr{
+    height: 120px;
+    background-image: url('456_03.png');
+    background-repeat: repeat;
+}
+.bgr2{
+    height: 120px;
+    background-image: url('456_03.png');
+    background-repeat: no-repeat;  
+}
+.bgp{
+    height: 120px;
+    background-image: url('456_03.png');
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.bgp2{
+    height: 120px;
+    background-image: url('456_03.png');
+    background-repeat: no-repeat;
+    background-position: right; 
+}
+.bgp3{
+    height: 120px;
+    background-image: url('456_03.png');
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.bgp4{
+    border: 1px solid black;
+    height: 150px;
+    background-image: url('456_03.png');
+    background-repeat: no-repeat;
+    background-position: bottom; 
+}
+.bgp5{
+    border: 1px solid black;
+    height: 150px;
+    background-image: url('456_03.png');
+    background-repeat: no-repeat;
+    background-position: bottom right; 
+}
+.bgp6{
+    border: 1px solid black;
+    height: 150px;
+    background-image: url('456_03.png');
+    background-repeat: no-repeat;
+    background-position: -10px -20px; 
+}
+.bgp7{
+    border: 1px solid black;
+    height: 150px;
+    background-image: url('456_03.png');
+    background-repeat: no-repeat;
+    background-position:  -20px; 
+}
+.bgrg{
+    background: rgba(102, 0, 0, 0.2);
+}
+.priority td,th{
+    border: .5px solid black;
+    background-color: white;
+    font-size: 18px;
+}
+.box{
+    width: 300px;
+    height: 50px;
+    border: 1px solid black;
+}
+.border table,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.box1{
+    border: 1px solid black;
+    padding: 5px;
+}
+.box2{
+    border: 1px solid black;
+    padding: 5px;
+}
+.box3{
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+.box4{
+    border: 1px solid black;
+    padding: 5px 10px 30px;
+}
+.box5{
+    border: 1px solid black;
+    padding: 5px 10px 20px 30px;
+}
+.boxm{
+    width: 300px;
+    margin: 0 auto;
+}
+.boxm1{
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid black;
+    text-align: center;
+}
+.boxm2{
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+.boxm3{
+    margin-top: 20px;
+    border: 1px solid black;
+}
+.boxr{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+}
+.boxr2{
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    background-color: rgb(197, 5, 5);
+    color: white;
+}
+.boxr3{
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    background-color: rgb(197, 5, 5);
+    color: white;
+}
+.boxr4{
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    background-color: rgb(197, 5, 5);
+    color: white;
+}
+.boxs{
+    width: 200px;
+    height: 50px;
+    /* border: 1px solid black; */
+    box-shadow: 10px 10px 10px -4px yellow;
+}
+.boxs2{
+    width: 200px;
+    height: 50px;
+    /* border: 1px solid black; */
+    box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.4);  
+}
+.boxs3{
+    text-shadow: 10px 10px 10px yellow;
+}
+.boxfloat1{
+    float: left;
+    border: 1px solid red;
+}
+.boxfloat2{
+    float: right;
+    border: 1px solid blue;
+}
+.boxfloatf{
+    width: 500px;
+    border: 1px solid black;
+}
+.dings{
+    position: static;
+}
+.boxrelative1{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: pink;
+}
+.boxrelative2{
+    width: 200px;
+    height: 50px;
+    background-color: skyblue;
+}
+.boxrelative3{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background-color: pink;
+}
+.son{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: skyblue;
+}
+.boxrelative4{
+    position: fixed;
+    top: 50%;
+    margin-top: -60px;
+    right: 10px;
+}
+.boxrelative5{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background-color: pink;
+}
+.boxrelative5 .son{
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: skyblue;
+}
+.boxdis1{
+    display: block;
+}
+.boxdis2{
+    display: none;
+}
+.boxdis3{
+    display: block;
+}
+.boxdis4{
+    visibility: visible;
+}
+.boxdis5{
+    visibility: hidden;
+}
+.boxdis6{
+    visibility: visible;
+}
+.boxover{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    overflow: hidden;
+}
+.boxover2{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    overflow: visible;
+}
+.boxover3{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    overflow: scroll;  
+}
+.boxover4{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    overflow: auto; 
+}
+.cssgao{
+    margin-left: 20px;
+}
+.boxsan{
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 10px solid transparent;
+    border-left-color: pink;
+    border-right-color: pink;
+    border-top-color: green;
+    border-bottom-color: green;
+}
+.boxmouse{
+    cursor: default;
+}
+.boxmouse2{
+    cursor: pointer;
+}
+.boxmouse3{
+    cursor: move;
+}
+.boxmouse4{
+    cursor: text;
+}
+.boxmouse5{
+    cursor: not-allowed;
+}
+.boxtext{
+    resize: none;
+}
+.boxver{
+    width: 500px;
+    border: 1px solid black;
+}
+.boxsheng{
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid black;
+}
+.boxsheng2{
+    width: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.boxjq li{
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 200px;
+    border: 1px solid red;
+    margin-left: -1px;
+}
+.boxjq li:hover{
+    /* 1、如果盒子没有定位，则鼠标经过时添加相对定位 */
+    /* position: relative; */
+    /* 2、如果盒子已经有定位，则使用z-index提高层级 */
+    z-index: 1;
+    border: 1px solid blue;
+}
+.boxjq2{
+    width: 300px;
+    height: 120px;
+    border: 1px solid black;
+}
+.boxjq2 .pic{
+    float: left;
+}
+.boxjq2 .pic img{
+    height: 100%;
+}
+.boxjq3{
+    text-align: center;
+}
+.boxjq3 a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #f7f7f7;
+    border: 1px solid #cccccc;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+}
+.boxjq3 .prev,
+.boxjq3 .next{
+    width: 85px;
+}
+.boxjq3 .selected,
+.boxjq3 .exp{
+    background-color: white;
+    border: none;
+}
+.boxjq3 input{
+    width: 46px;
+    height: 35px;
+    border: 1px solid #cccccc;
+    outline: none;
+}
+.boxjq3 button{
+    width: 60px;
+    height: 35px;
+    background-color: #f7f7f7;
+    border: 1px solid #cccccc;
+    font-size: 14px;
+}
+.boxjq4 .box1{
+    width: 0;
+    height: 0;
+    padding: 0;
+    border-color: transparent red transparent transparent;
+    border-style: solid;
+    border-width: 100px 50px 0 0 ;
+}
+.boxjq4 .price{
+    width: 160px;
+    height: 24px;
+    border: 1px solid red;
+    margin: 10px auto;
+    line-height: 24px;
+}
+.boxjq4 .miaosha{
+    position: relative;
+    float: left;
+    width: 90px;
+    height: 100%;
+    background-color: red;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+.boxjq4 .miaosha i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-color: transparent #fff transparent transparent;
+    border-style: solid;
+    border-width: 22px 10px 0 0;
+}
+.boxjq4 .origin{
+    font-size: 12px;
+    color: gray;
+    text-decoration: line-through;
+}

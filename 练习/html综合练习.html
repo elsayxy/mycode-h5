@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html练习</title>
+    <link rel="stylesheet" href="html练习.css">
+</head>
+
+<body>
+    <h1>------------HTML标签练习------------</h1>
+    <div class="testhtml">
+        <h2>1、表格</h2>
+        <table border="1">
+            <tr>
+                <th>列1</th>
+                <th>列2</th>
+                <th>列3</th>
+            </tr>
+            <tr>
+                <td>这里是行2</td>
+                <!-- 单元格行合并 -->
+                <td colspan="2">201</td>
+            </tr>
+            <tr>
+                <td>这里是行3</td>
+                <!-- 单元格列合并 -->
+                <td rowspan="2">303</td>
+                <td>33033</td>
+            </tr>
+            <tr>
+                <td>这里是行4</td>
+                <td>44044</td>
+            </tr>
+        </table>
+
+        <h2>2、列表一：无序列表(重要)</h2>
+        <ul>
+            <li>列表项1</li>
+            <li>列表项2</li>
+            <li>列表项3</li>
+        </ul>
+        <h2>3、列表二：有序列表(了解)</h2>
+        <ol>
+            <li>有序列表1</li>
+            <li>有序列表2</li>
+            <li>有序列表3</li>
+        </ol>
+        <h2>4、列表三：自定义列表(重点)</h2>
+        <dl>
+            <dt>这里是标题</dt>
+            <dd>自定义列表内容1</dd>
+            <dd>自定义列表内容2</dd>
+            <dd>自定义列表内容3</dd>
+        </dl>
+        <h2>5、表单标签</h2>
+        <form action="#">
+            用户名：<input type="text" name="usr" value="请输入用户名" maxlength="8"><br>
+            密码：<input type="password" name="pwd"><br>
+            性别：<input type="radio" name="sex" value="男" id="man" checked="checked">
+            <label for="man">男</label>
+            <input type="radio" name="sex" value="女" id="woman">
+            <label for="woman">女</label> <br>
+            籍贯：<select>
+                <option></option>
+                <option>北京</option>
+                <option>天津</option>
+                <option>上海</option>
+                <option>深圳</option>
+                <option>江苏</option>
+                <option>湖南</option>
+            </select><br>
+            个人建议：<textarea name="" id="" cols="50" rows="3">请您输入个人建议</textarea><br>
+            爱好：<input type="checkbox" name="hobby" value="1" id="hobby1">
+            <label for="hobby1">吃饭</label>
+            <input type="checkbox" name="hobby" value="2" id="hobby2">
+            <label for="hobby2">睡觉</label>
+            <input type="checkbox" name="hobby" value="3" id="hobby3">
+            <label for="hobby3">打豆豆</label><br>
+            上传头像：<input type="file"><br>
+            <input type="text" placeholder="请输入验证码">
+            <input type="button" value="获取验证码"><br>
+            <!-- <input type="reset" value="重新填写"> -->
+            <button type="reset">重新填写</button>
+            <button>免费注册</button>
+        </form>
+    </div>
+
+    <br>
+    <h1>------------CSS练习------------</h1>
+    <div class="testcss">
+        <h2>1、CSS基础选择器</h2>
+        <i>这是i标签，测试标签选择器</i>
+        <div class="content">这是div标签，测试类选择器</div>
+        <div class="content font20">这是div标签，测试多类名选择器</div>
+        <div id="pink">这里测试id选择器，id名称为pink</div>
+        <br>
+        <h2>2、字体属性</h2>
+        <p class="family">使用font-family设置字体系列:微软雅黑</p>
+        <p class="family2">使用font-family设置字体系列:Courier New</p>
+        <p class="family3">使用font-family设置字体系列:Times New Roman</p>
+        <p class="weight400">使用font-weight设置文字粗细：400</p>
+        <p class="weight700">使用font-weight设置文字粗细：700</p>
+        <p class="style_n">使用font-style设置文字样式：normal（正常）</p>
+        <p class="style_i">使用font-style设置文字样式：italic（斜体）</p>
+        <p class="font_sum">文字复合属性：样式(style) 粗细(weight) 大小(size,必须有) 字体(family，必须有)</p>
+        <br>
+        <h2>3、文本属性</h2>
+        <p class="color_red">使用color设置文本的颜色</p>
+        <p class="textalign">使用text-align设置文本的水平对齐方式</p>
+        <p class="textd1">使用text-decoration设置文本的修饰：下划线（underline）</p>
+        <p class="textd2">使用text-decoration设置文本的修饰：上划线（overline）</p>
+        <p class="textd3">使用text-decoration设置文本的修饰：删除线（line-through）</p>
+        <p class="texti1">使用text-indent设置文本的修饰：10px</p>
+        <p class="texti2">使用text-indent设置文本的修饰：2em</p>
+        <p class="lineh">使用line-height设置文本的行间距：30px</p>
+        <br>
+        <h2>4、CSS复合选择器</h2>
+        <p>4.1、后代选择器(只包含元素的最近一级子元素)，使用空格</p>
+        <ol>
+            <li>我是ol的孩子</li>
+            <li>我是ol的孩子</li>
+            <li>
+                <p>我是ol的孙子</p>
+            </li>
+        </ol>
+        <p>4.2、子选择器(包含元素的所有后代)，使用大于号【>】</p>
+        <div class="nav">
+            <a>我是儿子</a>
+            <p>
+                <a href="#">我是孙子</a>
+            </p>
+        </div>
+
+        <p>4.3、并集选择器(包含元素的所有后代)，使用逗号【,】</p>
+        <p>4.4、伪类选择器，使用冒号【：】</p>
+        <a href="#" class="alink">小猪佩奇a:link未被访问的链接</a><br>
+        <a href="#" class="avisit">小猪佩奇a:visited已被访问的链接</a><br>
+        <a href="#" class="ahover">小猪佩奇a:hover鼠标位于其上的链接（重要）</a><br>
+        <a href="#" class="aactive">小猪佩奇a:active活动链接（鼠标按下未弹起）</a><br>
+
+        <p>4.5、伪类选择器--focus(用于选取获得焦点的表单元素)</p>
+        <div class="focus">
+            <input type="text" name="" id=""><br>
+            <input type="text" name="" id=""><br>
+            <input type="text" name="" id=""><br>
+        </div>
+        <br>
+        <h2>5、CSS的元素显示模式</h2>
+        <p>5.1、块元素特点：独占一行；可以设置高度、宽度、外边距和内边距；宽度默认是100%；里面可以放行内或者块元素</p>
+        <h1>这是h1标签</h1>
+        <h2>这是h2标签</h2>
+        <h3>这是h3标签</h3>
+        <h4>这是h4标签</h4>
+        <h5>这是h5标签</h5>
+        <h6>这是h6标签</h6>
+        <p>这是p标签</p>
+        <div>这是div标签</div>
+        <ul> 这是ul标签
+            <li>这是ul--li标签</li>
+        </ul>
+        <ol>这是ol标签
+            <li>这是ol--li标签</li>
+        </ol>
+        <br>
+        <p>5.2、行内元素特点：相邻行内元素在一行显示，一行可以显示多个；高、宽直接设置无效；默认宽度就是内容的宽度；行内元素只能容纳文本或者其他行内元素</p>
+        <p>注意：行内元素的标签需要写在一行上，不然中间会出现空格</p>
+        <div class="nei">
+            <a
+                href="#">这里是a标签</a><strong>这里是strong标签</strong><b>这里是b标签</b><em>这里是em标签</em><i>这里是i标签</i><del>这里是del标签</del><s>这里是s标签</s><ins>这里是ins标签</ins><u>这里是u标签</u><span>这里是span标签</span>
+        </div>
+        <br>
+        <p>5.3、行内块元素特点：和相邻元素在一行上，但是它们之间会有空白缝隙，一行可以显示多个；默认宽度就是内容的宽度；可以控制高度、行高、外边距以及内边距</p>
+        <div class="block">
+            <img src="" alt="">
+            <input type="text" value="这里是input">
+            <td>这里是td</td>
+            <input type="text" value="这里是input">
+        </div>
+        <br>
+        <p>5.4、元素显示模式转换</p>
+        <div class="displays">
+            <strong>这里是strong1标签,转换为block块元素</strong>
+            <strong>这里是strong2标签,转换为block块元素</strong>
+            <div>这里是div标签1，转换为inline行内元素。</div>
+            <div>这里是div标签2，转换为inline行内元素。</div>
+        </div>
+        <p>5.5、单行文字垂直居中</p>
+        <p class="lineh">设置文字垂直居中：“line-height”</p>
+        <br>
+        <h2>6、CSS的背景</h2>
+        <p>6.1、背景颜色</p>
+        <div class="bgi">6.2、背景图片</div>
+        <div class="bgr">6.3、背景平铺:repeat</div>
+        <div class="bgr2">背景平铺:no-repeat</div>
+        <div class="bgp">6.4、背景图片位置background-repeat(top):如果只指定了一个方位名词，另外一个省略，默认居中对齐</div>
+        <div class="bgp2">背景图片位置(right)</div>
+        <div class="bgp3">背景图片位置(left)</div>
+        <div class="bgp4">背景图片位置(bottom)</div>
+        <div class="bgp5">背景图片位置(bottom,right)</div>
+        <div class="bgp6">背景图片位置，参数为精确单位(x坐标,y坐标)</div>
+        <div class="bgp7">背景图片位置，参数为精确单位(如果只指定一个数值，该数值一定是x坐标，另外一个默认垂直居中)</div>
+        <div>6.5、背景图片固定background-attachment</div>
+        <p>scroll:背景图像是随对象内容滚动</p>
+        <p>fixed:背景图像固定</p>
+        <div class="bgrg">6.6、背景图片半透明（rgba）</div>
+        <br>
+        <h2>7、CSS的三大特点</h2>
+        <p>层叠性</p>
+        <p>继承性</p>
+        <p>优先级</p>
+        <table class="priority">
+            <tr>
+                <th>选择器</th>
+                <th>选择器权重</th>
+            </tr>
+            <tr>
+                <td>继承或者*</td>
+                <td>0,0,0,0</td>
+            </tr>
+            <tr>
+                <td>元素选择器</td>
+                <td>0,0,0,1</td>
+            </tr>
+            <tr>
+                <td>类选择器，伪类选择器</td>
+                <td>0,0,1,0</td>
+            </tr>
+            <tr>
+                <td>ID选择器</td>
+                <td>0,1,0,0</td>
+            </tr>
+            <tr>
+                <td>行内样式style=“”</td>
+                <td>1,0,0,0</td>
+            </tr>
+            <tr>
+                <td>!important 重要的</td>
+                <td>∞无穷大</td>
+            </tr>
+        </table>
+        <br>
+        <h2>8、盒子模型</h2>
+        <div class="border">
+            <p>8.1、边框（border）</p>
+            <div class="box">这是一个盒子(300px*50px)，可以设定边框</div><br>
+            <p>border-collapse:控制表格边框，相邻单元格的边框</p>
+            <table>
+                <tr>
+                    <td>111111111</td>
+                    <td>222222222</td>
+                </tr>
+                <tr>
+                    <td>333333333</td>
+                    <td>444444444</td>
+                </tr>
+            </table>
+            <br>
+            <p>8.2、内边距（padding）</p>
+            <div class="box1">内边距（padding）:5px(表示上下左右都有5px内边距)</div>
+            <span class="box2">内边距（padding）:5px</span><span class="box2">内边距（padding）:5px</span>
+            <div class="box1">内边距（padding）:5px</div>
+            <div class="box3">内边距（padding）:5px 10px（表示上下内边距是5px，左右内边距是10px）</div>
+            <div class="box4">内边距（padding）:5px 10px 20px（表示上内边距是5px，左右内边距是10px，下内边距是20px）</div>
+            <div class="box5">内边距（padding）:5px 10px 20px 30px（表示上5px，右10px，下20px 左30px）</div>
+            <br>
+            <p>8.3、外边距（margin）</p>
+            <p>块级盒子水平居中：</p>
+            <div class="boxm">外边距可以让盒子水平居中，但是必须满足2个条件：盒子必须指定宽度，盒子左右外边距设置为auto</div>
+            <p>行内元素盒子水平居中：</p>
+            <div class="boxm1">
+                <span>行内元素水平居中：父级块元素水平居中，并设置text-align: center</span><br><span>这是第二个span标签</span>
+            </div>
+            <p>外边距合并</p>
+            <div class="boxm2">这是第一个盒子，下外边距10px</div>
+            <div class="boxm3">这是第二个盒子，上外边距20px</div>
+            <p>两个盒子之间的垂直间距20px，这种现象叫做【相邻块元素垂直外边距的合并】。解决方案：尽量只给一个盒子添加margin值</p><br>
+
+            <h2>9、圆角边框（border-radius重点）</h2>
+            <p>正方形设置为圆的方法:把数值修改为高度或者宽度的一半即可，或者直接写为50%</p>
+            <div class="boxr">圆</div><br>
+            <p>矩形：把数值设置为高度的一半</p>
+            <div class="boxr2">新人福利</div><br>
+            <p>矩形只修改左侧：border-top-left-radius、border-bottom-left-radius设置为高度的一半</p>
+            <div class="boxr3">新人福利</div><br>
+            <p>矩形只修改右侧：border-top-right-radius、border-bottom-right-radius设置为高度的一半</p>
+            <div class="boxr4">新人福利</div><br>
+
+            <h2>10、盒子阴影（box-shadow重点）</h2>
+            <div class="boxs">盒子阴影</div><br>
+            <div class="boxs2">盒子阴影,可设置透明度</div><br>
+
+            <h2>11、文字阴影（text-shadow）</h2>
+            <p class="boxs3">这里是文本</p><br>
+            <h2>12、浮动（float）</h2>
+            <div class="boxfloat">
+                <div class="boxfloatf clearfix">
+                    <div class="boxfloat1">这是盒子1</div>
+                    <div class="boxfloat1">这是盒子1</div>
+                    <div class="boxfloat1">这是盒子1</div>
+                    <div class="boxfloat1">这是盒子1</div>
+                    <div class="boxfloat1">这是盒子1</div>
+                    <div class="boxfloat2">这是盒子2</div>
+                    <div class="boxfloat2">这是盒子2</div>
+                    <div class="boxfloat2">这是盒子2</div>
+                    <div class="boxfloat2">这是盒子2</div>
+                    <div class="boxfloat2">这是盒子2</div>
+                </div>
+            </div><br>
+            <h2>13、定位</h2>
+            <p>静态定位static(了解)</p>
+            <p>语法：选择器{positon:static;}</p>
+            <div class="dings">这里是静态定位效果:元素的默认定位方式，无定位的意思。很少用到</div><br>
+            <p>相对定位relative(重要)</p>
+            <div class="boxrelative1"></div>
+            <div class="boxrelative2"></div><br>
+            <p>绝对定位absolute(重要)</p>
+            <div class="boxrelative3">
+                <div class="son"></div>
+            </div><br>
+            <p>固定定位fixed(重要)</p>
+            <div class="boxrelative4">固定定位fixed
+                <img src="456_03.png" alt="">
+            </div><br>
+            <p>定位叠放次序 z-index</p><br>
+            <p>绝对定位的盒子居中</p>
+            <div class="boxrelative5">
+                <div class="son"></div>
+            </div><br>
+            <p>定位的特殊特性<br>
+                绝对定位和固定定位也和浮动类似。<br>
+                1.行内元素添加绝对或者固定定位，可以直接设置高度和宽度。<br>
+                2.块级元素添加绝对或者固定定位，如果不给宽度或者高度，默认大小是内容的大小。
+            </p><br>
+            <p>脱标的盒子不会触发外边距塌陷<br>
+                浮动元素、绝对定位（固定定位）元素的都不会触发外边距合并的问题。
+            </p><br>
+            <p>绝对定位（固定定位）会完全压住盒子<br>
+                浮动元素不同，只会压住它下面标准流的盒子，但是不会压住下面标准流盒子里面的文字（图片）<br>
+                但是绝对定位（固定定位）会压住下面标准流所有的内容。<br>
+                浮动之所以不会压住文字，因为浮动产生的目的最初是为了做文字环绕效果的。文字会围绕浮动元素。
+            </p><br>
+        </div>
+        <h2>14、元素的显示与隐藏</h2>
+        <div class="boxdis1">这个盒子1显示</div>
+        <div class="boxdis2">这个盒子2隐藏</div>
+        <div class="boxdis3">这个盒子3显示</div>
+        <div class="boxdis4">这个元素4显示</div>
+        <div class="boxdis5">这个元素5隐藏</div>
+        <div class="boxdis6">这个元素6显示</div>
+        <p>如果隐藏元素想要原来位置，就用【visibility: hidden】<br>
+            如果隐藏元素不想要原来位置，就用【display: none】（用处更多，重点）
+        </p>
+        <br>
+        <p>overflow溢出：hidden</p>
+        <div class="boxover">
+            overflow溢出overflow溢出overflow溢出overflow溢出overflow溢出overflow溢出
+        </div><br>
+        <p>overflow溢出：visible</p>
+        <div class="boxover2">
+            overflow溢出overflow溢出overflow溢出overflow溢出overflow溢出overflow溢出
+        </div><br>
+        <p>overflow溢出：scroll</p>
+        <div class="boxover3">
+            overflow溢出overflow溢出overflow溢出overflow溢出overflow溢出overflow溢出overflow溢出overflow溢出
+        </div><br>
+        <p>overflow溢出：auto</p>
+        <div class="boxover4">
+            overflow溢出overflow溢出overflow溢出overflow溢出overflow溢出overflow溢出overflow溢出overflow溢出
+        </div><br>
+    </div>
+    <h1>------------CSS高级技巧，新特性------------</h1>
+    <div class="cssgao">
+        <h2>1、精灵图（sprites）的使用</h2>
+        <p>移动背景图片位置，使用background-position(x坐标，y坐标)</p><br>
+        <h2>2、字体图标</h2>
+        <a href="http://icomoon.io">下载地址：http://icomoon.io</a>
+        <br>
+        <h2>3、CSS三角</h2>
+        <div class="boxsan"></div>
+        <br>
+        <h2>4、CSS用户界面样式</h2>
+        <div class="boxmouse">鼠标样式：默认default</div>
+        <div class="boxmouse2">鼠标样式：小手pointer</div>
+        <div class="boxmouse3">鼠标样式：移动move</div>
+        <div class="boxmouse4">鼠标样式：文本text</div>
+        <div class="boxmouse5">鼠标样式：禁止not-allowed</div>
+        <br>
+        <textarea class="boxtext" name="" id="" cols="30" rows="5">防止拖拽文本域：resize</textarea>
+        <br>
+        <h2>5、vertical-align属性应用</h2>
+        <p>图片、表单都属于行内块元素，默认的vertical-align是基线对齐。<br>
+            此时可以给图片、表单这些行内块元素的vertical-align属性设置为middle就可以让文字和图片垂直居中对齐了。</p>
+        <div class="boxver">
+            <img src="456_03.png" alt="">
+            <i>这里是文字</i>
+        </div>
+        <br>
+        <p>解决图片底部默认空白缝隙问题</p>
+        <img src="clipboard.png" alt="">
+        <br>
+        <h2>6、溢出的文字省略号显示</h2>
+        <p>单行文本溢出显示省略号</p>
+        <div class="boxsheng">这里是文字，超出的部分省略号显示</div>
+        <br>
+        <p>多行文本溢出显示省略号（需要考虑兼容性问题）</p>
+        <div class="boxsheng2">这里是文字，超出的部分省略号显示!这里是文字，超出的部分省略号显示!这里是文字，超出的部分省略号显示!</div>
+        <br>
+        <h2>7、常见布局技巧</h2>
+        <p>margin负值的运用</p>
+        <ul class="boxjq clearfix">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <br>
+        <p>文字围绕浮动元素</p>
+        <div class="boxjq2">
+            <div class="pic">
+                <img src="456_03.png" alt="">
+            </div>
+            <p>拜登与六大国安和外交提名及任命人公开亮相：这支团队...</p>
+        </div>
+        <br>
+        <p>行内块巧妙运用</p>
+        <div class="boxjq3">
+            <a href="#" class="prev">&lt;&lt;上一页</a>
+            <a href="#" class="selected">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#" class="exp">...</a>
+            <a href="#" class="next">&gt;&gt;下一页</a>
+            到第
+            <input type="text">
+            页
+            <button>确定</button>
+        </div>
+        <br>
+        <p>CSS三角强化</p>
+        <div class="boxjq4">
+            <div class="box1"></div>
+            <div class="price">
+                <span class="miaosha">
+                    ￥1650
+                    <i></i>
+                </span>
+                <span class="origin">￥5650</span>
+            </div>
+        </div>
+        <br><div>这里是底部</div>
+</body>
+
+</html>

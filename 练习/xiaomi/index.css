@@ -1,0 +1,172 @@
+/* 把所有标签的内外边距清零 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* em和i标签内的斜体文字设置为不倾斜 */
+em,
+i {
+    font-style: normal
+}
+
+/* 去掉li的小圆点 */
+li {
+    list-style: none
+}
+
+img {
+    /* 兼容低版本的浏览器：如果图片外面包含了链接，会出现边框的问题 */
+    border: 0;
+    /* 解决图片底侧有空白缝隙的问题 */
+    vertical-align: middle
+}
+
+button {
+    /* 鼠标经过button按钮时，会变成小手形状 */
+    cursor: pointer
+}
+
+a {
+    color: #666;
+    /* 取消文字链接的下划线 */
+    text-decoration: none
+}
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+/* 字体声明,注意路径变化 */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?3z3adl');
+    src:  url('fonts/icomoon.eot?3z3adl#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?3z3adl') format('truetype'),
+      url('fonts/icomoon.woff?3z3adl') format('woff'),
+      url('fonts/icomoon.svg?3z3adl#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+body{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Microsoft Yahei",Arial, Helvetica, sans-serif;
+}
+.w{
+    width: 1220px;
+    margin: 0 auto;
+}
+.show{    
+    width: 100%;
+    height: 120px;
+    background-color: pink;
+}
+.show a{
+    display: block;
+    background: url(images/guanggao.jpg) no-repeat center;
+    background-size: auto 120px;
+    width: 100%;
+    height: 120px;
+}
+.nav{
+    height: 40px;
+    background-color: #333;
+    line-height: 40px;
+}
+.nav1 ul{
+    float: left;
+}
+.nav1 ul li{
+    float: left;
+}
+.sep{
+    color: #424242;
+    margin: 0 3.6px;
+}
+.nav1 ul li a,
+.nav2 a{
+    color: #b0b0b0;
+    font-size: 12px;
+}
+.nav1 ul li a:hover,
+.nav2 a:hover
+{
+    color: #fff;
+}
+.nav2{
+    float: right;
+}
+.shopcart{
+    display: inline-block;
+    width: 120px;
+    background: #424242;
+    text-align: center;
+    margin-left: 20px;
+}
+.shopcart::before{
+    font-family: 'icomoon';
+    content: '\e90a';
+    margin-right: 5px;
+}
+.header-logo{
+    float: left;
+    width: 62px;
+    height: 100px;
+    background-color: pink;
+}
+.header-nav{
+    float: left;
+    width: 850px;
+    height: 100px;
+    background-color: red;
+}
+.header-search{
+    float: right;
+    width: 296px;
+    height: 100px;
+    background-color: green; 
+}
+.logo{
+    overflow: hidden;
+    display: block;
+    position: relative;
+    margin-top: 23px;    
+    height: 55px;
+    width: 55px;
+    background-color: #ff6700;
+    font-size: 0;
+}
+.logo::before,
+.logo::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    content: '';
+    background: url(images/mi-logo.png) no-repeat center;
+    transition: all .2s;
+}
+.logo::after{
+    margin-left: -55px;
+    background: url(images/mi-home.png) no-repeat center;
+}
+.logo:hover::after{
+    margin-left: 0;
+}
+.logo:hover::before{
+    margin-left: -55px;
+}
